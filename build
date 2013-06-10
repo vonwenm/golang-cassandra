@@ -1,5 +1,4 @@
-rm -rf target
-mkdir -p target
+#!/bin/sh
 
 if [ -n "$GO_PIPELINE_LABEL" ] ; then
     buildVersion=$GO_PIPELINE_LABEL
@@ -7,6 +6,4 @@ else
     buildVersion='LOCAL'
 fi
 
-sh scripts/apply-steps-to-local.sh &&
-sh test &&
-zip -rq target/casper-ml_$buildVersion.zip modules scripts
+zip -rq target/casper-ml_$buildVersion.zip modules scripts steps

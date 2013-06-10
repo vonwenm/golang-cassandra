@@ -5,7 +5,7 @@ if [ -s /usr/share/apache-cassandra-1.1.6/bin/cqlsh ]
 then
   echo "Build track store cassandra schema in $1 ..."
   echo "script dir is `dirname $0`"
-  script_dir=`dirname $0`
+  script_dir="`dirname $0`/../scripts"
   echo "script dir is $script_dir"
 
   if [ $# -eq 0 ]

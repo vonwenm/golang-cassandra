@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+export PATH=/usr/local/python/go/python2.6/bin:$PATH
+
 set -e # Makes the script exit as soon as an error happens
 
 cd $(dirname $0)

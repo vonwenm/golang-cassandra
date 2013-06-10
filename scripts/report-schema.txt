@@ -1,0 +1,33 @@
+CREATE KEYSPACE reports
+         WITH strategy_class = 'org.apache.cassandra.locator.SimpleStrategy'
+         AND strategy_options:replication_factor='2';
+
+USE reports;
+
+CREATE TABLE monthly_books(
+    bpid_month varchar,
+    title varchar,
+    doi varchar,
+    json varchar,
+    PRIMARY KEY (bpid_month, title, doi)
+);
+
+CREATE TABLE monthly_books_metadata(
+    bpid_month varchar,
+    json varchar,
+    PRIMARY KEY (bpid_month)
+);
+
+CREATE TABLE monthly_journals(
+    bpid_month varchar,
+    title varchar,
+    jid varchar,
+    json varchar,
+    PRIMARY KEY (bpid_month, title, jid)
+);
+
+CREATE TABLE monthly_journals_metadata(
+    bpid_month varchar,
+    json varchar,
+    PRIMARY KEY (bpid_month)
+);
