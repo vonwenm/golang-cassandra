@@ -10,6 +10,7 @@
     <file path="$PROJECT_DIR$/../track/ops/ci/prepare-tests.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370956682673" ignored="false" />
     <file path="/prepare-tests.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370956682673" ignored="false" />
     <file path="$PROJECT_DIR$/../track/priam/src/main/scala/com/springer/priam/repositories/CassandraCounterDownloadRepository.scala" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370955188349" ignored="false" />
+    <file path="/apply-cass-schema-to-ciagent.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370959565917" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <file leaf-file-name="apply-cass-schema-to-ciagent.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ci/apply-cass-schema-to-ciagent.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="47" selection-start="462" selection-end="462" vertical-scroll-proportion="0.33088234">
+            <state line="20" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.36764705">
               <folding />
             </state>
           </provider>
@@ -463,7 +464,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ci/apply-cass-schema-to-ciagent.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="47" selection-start="462" selection-end="462" vertical-scroll-proportion="0.33088234">
+        <state line="20" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.36764705">
           <folding />
         </state>
       </provider>

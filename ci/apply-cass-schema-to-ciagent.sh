@@ -16,5 +16,5 @@ RPC_HOST=${1:-`hostname -i | tr ' ' '\n' | tail -1`}
 
 echo "Applying scheme in $RPC_HOST"
 
-$CASSANDRA_BIN_HOME/bin/cqlsh --cql3 $RPC_HOST --file `find . -name trackdb-schema.txt` | tee /tmp/buildTrackStoreSchema.log
-$CASSANDRA_BIN_HOME/bin/cqlsh --cql3 $RPC_HOST --file `find . -name report-schema.txt` | tee /tmp/buildReportSchema.log
+$CASSANDRA_BIN_HOME/bin/cqlsh $RPC_HOST --cql3 --file ../scripts/trackdb-schema.txt | tee /tmp/buildTrackStoreSchema.log
+$CASSANDRA_BIN_HOME/bin/cqlsh $RPC_HOST --cql3 --file ../scripts/report-schema.txt | tee /tmp/buildReportSchema.log
