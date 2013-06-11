@@ -17,12 +17,8 @@ if [ -f $CASSANDRA_HOME/cassandra.pid ] && ps -p $(<$CASSANDRA_HOME/cassandra.pi
     sleep 5
 fi
 
-PID=$(ps -o pid,args | grep -e [C]assandraDaemon  | awk '{print $1}')
+PID=$(ps aux | grep apache-cassandra-1.1.6 | grep -v grep | awk '{print $2}')
 if [ ! -z "$PID" ]; then
     echo "There is a cassandra running with pid $PID... killing it"
     kill -9 $PID
 fi
-
-
-
-

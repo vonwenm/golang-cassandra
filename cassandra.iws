@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf92cec-5dc1-4cbe-9746-fa40af991b15" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/report-schema.txt" afterPath="$PROJECT_DIR$/scripts/report-schema.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ci/stop-cassandra.sh" afterPath="$PROJECT_DIR$/ci/stop-cassandra.sh" />
     </list>
     <ignored path="cassandra.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370948857449" ignored="false" />
     <file path="$PROJECT_DIR$/../track/ops/ci/prepare-tests.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370956682673" ignored="false" />
-    <file path="/prepare-tests.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370961600619" ignored="false" />
+    <file path="/prepare-tests.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370965105129" ignored="false" />
     <file path="$PROJECT_DIR$/../track/priam/src/main/scala/com/springer/priam/repositories/CassandraCounterDownloadRepository.scala" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370955188349" ignored="false" />
     <file path="/apply-cass-schema-to-ciagent.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370959565917" ignored="false" />
     <file path="/a.dummy" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370960531854" ignored="false" />
-    <file path="$PROJECT_DIR$/../reports/ops/ci/prepare-tests.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370961635722" ignored="false" />
+    <file path="$PROJECT_DIR$/../reports/ops/ci/prepare-tests.sh" changelist="fbf92cec-5dc1-4cbe-9746-fa40af991b15" time="1370965550829" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,16 @@
       <file leaf-file-name="bootstrap-cassandra.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ci/bootstrap-cassandra.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="46" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
+            <state line="6" column="5" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stop-cassandra.sh" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ci/stop-cassandra.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.44117647">
               <folding />
             </state>
           </provider>
@@ -100,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="report-schema.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="report-schema.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/report-schema.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.6066176">
+            <state line="33" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,6 +138,7 @@
       <list>
         <option value="$PROJECT_DIR$/ci/apply-cass-schema-to-ciagent.sh" />
         <option value="$PROJECT_DIR$/scripts/report-schema.txt" />
+        <option value="$PROJECT_DIR$/ci/stop-cassandra.sh" />
       </list>
     </option>
   </component>
@@ -467,13 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ci/bootstrap-cassandra.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="46" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ci/apply-cass-schema-to-ciagent.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
@@ -483,7 +486,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/report-schema.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.6066176">
+        <state line="33" column="0" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci/bootstrap-cassandra.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="5" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci/stop-cassandra.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="696" selection-end="696" vertical-scroll-proportion="0.44117647">
           <folding />
         </state>
       </provider>
