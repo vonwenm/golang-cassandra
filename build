@@ -6,4 +6,5 @@ else
     buildVersion='LOCAL'
 fi
 
-zip -rq target/casper-ml_$buildVersion.zip modules scripts steps
+mkdir -p target
+zip -rq target/casper-cass-$buildVersion.zip modules scripts steps
