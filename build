@@ -7,4 +7,4 @@ else
 fi
 
 mkdir -p target
-zip -rq target/casper-cass-$buildVersion.zip modules scripts steps
+zip -rq target/casper-cass-$buildVersion.zip modules scripts steps ci
