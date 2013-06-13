@@ -1,5 +1,5 @@
 set :service_name, 'cassandra'
-set :user, 'track'
+set :user, 'casper'
 
 set(:service_features, {
   :start_stop => false
