@@ -16,6 +16,8 @@ RPC_HOST=${1:-`hostname -i | tr ' ' '\n' | tail -1`}
 
 echo "Applying steps in $RPC_HOST"
 
+rm /var/casper/core/cassandra.steps.transactions
+
 pushd ..
 ruby scripts/apply-steps.rb $CASSANDRA_BIN_HOME/bin/cqlsh $RPC_HOST
 popd
