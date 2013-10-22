@@ -1,3 +1,5 @@
+use track;
+
 CREATE TABLE aggregation_events_json(
     year varchar,
     month varchar,
