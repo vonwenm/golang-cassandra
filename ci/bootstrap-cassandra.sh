@@ -20,7 +20,7 @@ CASSANDRA_COMMIT=$CASSANDRA_HOME/commit
 CASSANDRA_PAGES=$CASSANDRA_HOME/saved_caches
 
 # Killing old instances of cassandra if running 
-sh ./stop-cassandra.sh
+sudo sh ./stop-cassandra.sh
 
 
 # echo Deleting all old data
