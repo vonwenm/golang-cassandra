@@ -1,4 +1,5 @@
-CREATE KEYSPACE Zipkin; strategy_class = 'NetworkTopologyStrategy'
+CREATE KEYSPACE Zipkin
+  WITH strategy_class = 'NetworkTopologyStrategy'
   AND strategy_options:datacenter1 = '1';
 
 USE Zipkin;
