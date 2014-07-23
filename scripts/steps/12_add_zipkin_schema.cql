@@ -1,22 +1,40 @@
-connect 127.0.0.1/9160;
+CREATE KEYSPACE Zipkin; strategy_class = 'NetworkTopologyStrategy'
+  AND strategy_options:datacenter1 = '1';
 
-create keyspace Zipkin;
-use Zipkin;
+USE Zipkin;
 
-create column family Traces;
+CREATE TABLE AnnotationsIndex (
+  KEY blob PRIMARY KEY
+);
 
-create column family SpanNames;
-create column family ServiceNames;
+CREATE TABLE ServiceSpanNameIndex (
+  KEY blob PRIMARY KEY
+);
 
-create column family ServiceSpanNameIndex with comparator = LongType;
-create column family ServiceNameIndex with comparator = LongType;
-create column family AnnotationsIndex with comparator = LongType;
-create column family DurationIndex with comparator = LongType;
+CREATE TABLE Dependencies (
+  KEY blob PRIMARY KEY
+);
 
-/*
-TopAnnotations stores the top normal and key value annotations per service,
-and dependencies stores the parents and number of calls to parents per service
-*/
+CREATE TABLE Traces (
+  KEY blob PRIMARY KEY
+);
 
-create column family TopAnnotations with comparator = LongType;
-create column family Dependencies with comparator = LongType;
+CREATE TABLE SpanNames (
+  KEY blob PRIMARY KEY
+);
+
+CREATE TABLE DurationIndex (
+  KEY blob PRIMARY KEY
+);
+
+CREATE TABLE ServiceNameIndex (
+  KEY blob PRIMARY KEY
+);
+
+CREATE TABLE TopAnnotations (
+  KEY blob PRIMARY KEY
+);
+
+CREATE TABLE ServiceNames (
+  KEY blob PRIMARY KEY
+);
