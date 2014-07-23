@@ -1,41 +1,68 @@
-CREATE KEYSPACE Zipkin
-  WITH strategy_class = 'NetworkTopologyStrategy'
-  AND strategy_options:datacenter1 = '1';
+CREATE KEYSPACE Zipkin 
+  WITH strategy_class = 'org.apache.cassandra.locator.SimpleStrategy'
+  AND strategy_options:replication_factor='2';
 
 USE Zipkin;
 
 CREATE TABLE AnnotationsIndex (
-  KEY blob PRIMARY KEY
-);
-
-CREATE TABLE ServiceSpanNameIndex (
-  KEY blob PRIMARY KEY
+  key blob,
+  column1 bigint,
+  value blob,
+  PRIMARY KEY (key, column1)
 );
 
 CREATE TABLE Dependencies (
-  KEY blob PRIMARY KEY
-);
-
-CREATE TABLE Traces (
-  KEY blob PRIMARY KEY
-);
-
-CREATE TABLE SpanNames (
-  KEY blob PRIMARY KEY
+  key blob,
+  column1 bigint,
+  value blob,
+  PRIMARY KEY (key, column1)
 );
 
 CREATE TABLE DurationIndex (
-  KEY blob PRIMARY KEY
+  key blob,
+  column1 bigint,
+  value blob,
+  PRIMARY KEY (key, column1)
 );
 
 CREATE TABLE ServiceNameIndex (
-  KEY blob PRIMARY KEY
-);
-
-CREATE TABLE TopAnnotations (
-  KEY blob PRIMARY KEY
+  key blob,
+  column1 bigint,
+  value blob,
+  PRIMARY KEY (key, column1)
 );
 
 CREATE TABLE ServiceNames (
-  KEY blob PRIMARY KEY
+  key blob,
+  column1 blob,
+  value blob,
+  PRIMARY KEY (key, column1)
+);
+
+CREATE TABLE ServiceSpanNameIndex (
+  key blob,
+  column1 bigint,
+  value blob,
+  PRIMARY KEY (key, column1)
+);
+
+CREATE TABLE SpanNames (
+  key blob,
+  column1 blob,
+  value blob,
+  PRIMARY KEY (key, column1)
+);
+
+CREATE TABLE TopAnnotations (
+  key blob,
+  column1 bigint,
+  value blob,
+  PRIMARY KEY (key, column1)
+);
+
+CREATE TABLE Traces (
+  key blob,
+  column1 blob,
+  value blob,
+  PRIMARY KEY (key, column1)
 );
