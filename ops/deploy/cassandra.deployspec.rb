@@ -31,6 +31,8 @@ namespace :cassandra do
       run "cd #{release_path} && " +
           "PATH=#{cassandra_path}:#{python_path}:$PATH " +
           "ruby scripts/apply-steps.rb #{cassandra_path}/cqlsh #{_cassandra_cqlsh_host}"
+
+      run "cd #{release_path} && scripts/add-zipkin.sh"
     end
   
   end 
