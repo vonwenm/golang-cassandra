@@ -31,10 +31,9 @@ def apply(step)
 end
 
 def run_step_command(step)
-    cmd = "#{@cql_path} #{@cassandra_rpc_host} #{@cassandra_port} --cql3 --file #{step}" #> /tmp/cassandra-schema-logs-#{name_of step}.log"
+    cmd = "#{@cql_path} --cql3 --file #{step} #{@cassandra_rpc_host} #{@cassandra_port}" #> /tmp/cassandra-schema-logs-#{name_of step}.log"
     puts cmd
     `#{cmd}`
-
 end
 
 def steps_dir_name
@@ -49,6 +48,7 @@ STEPS_FILE = "/var/casper/core/cassandra.steps.transactions"
 
 @cql_path = ARGV[0]
 @cassandra_rpc_host = ARGV[1]
+puts "cql_path=#{@cql_path}"
 @cassandra_port = 9160
 
 @steps_dir = steps_dir_name
