@@ -1,4 +1,4 @@
-Project for applying the Cassandra schema and installing a **dockerized** Cassandra.
+Project for applying the Cassandra schema and installing a **dockerized** Cassandra for Track project.
 
 ## Usage
 
