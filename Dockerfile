@@ -27,5 +27,5 @@ ADD start-cassandra start-cassandra
 
 EXPOSE 9160 
 
-CMD ./start-cassandra > start-cassandra.out.txt 2>&1 & /tmp/try-port.sh localhost 9160 5 && for f in `find /home/casper/casper/cassandra/scripts/steps/ -type f | sort`; do echo $f; cqlsh --cql3 -f $f; done  && tail -f start-cassandra.out.txt
+CMD ./start-cassandra > start-cassandra.out.txt 2>&1 & /tmp/try-port.sh localhost 9160 20 && for f in `find /home/casper/casper/cassandra/scripts/steps/ -type f | sort`; do echo $f; cqlsh --cql3 -f $f; done  && tail -f start-cassandra.out.txt
 
